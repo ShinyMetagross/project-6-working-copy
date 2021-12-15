@@ -30,6 +30,14 @@ public class Entry {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Entry)
+            return this.word.equals(((Entry) obj).getWord());
+        else
+            return false;
+    }
+
+    @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Entry{");
         sb.append("word='")
